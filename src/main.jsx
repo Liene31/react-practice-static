@@ -3,17 +3,48 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 // import App from './App.jsx'
 
+function Header() {
+  return (
+    <header>
+      <img src="react-logo.png" width="40px" alt="React logo" />
+    </header>
+  );
+}
+
+function MainContent() {
+  return (
+    <main>
+      <h1>Reason I am excited to learn React</h1>
+      <ol>
+        <li>
+          React is a popular library, so I will be able to fit in with all the
+          coolest devs out there! 😎
+        </li>
+        <li>
+          I am more likely to get a job as a front end developer if I know React
+        </li>
+      </ol>
+    </main>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <small>© 2024 LB development. All rights reserved.</small>
+    </footer>
+  );
+}
+
+function Page() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
+  );
+}
+
 const root = createRoot(document.getElementById("root"));
-root.render(
-  <main>
-    <img src="react-logo.png" width="40px" alt="react-logo" />
-    <h1>Fun facts about React</h1>
-    <ul>
-      <li>Was first released in 2013</li>
-      <li>Was originally created by Jordan Walke</li>
-      <li>Has well over 100K stars in GitHub</li>
-      <li>Is maintained by Meta</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-    </ul>
-  </main>
-);
+root.render(<Page />);
